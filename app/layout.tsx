@@ -27,7 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="
+        bg-white text-black 
+        dark:bg-black dark:text-white 
+        min-h-screen 
+        transition-colors duration-300
+        ${geistSans.variable} ${geistMono.variable}
+      ">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <LanguageProvider>
             <Navbar/>
