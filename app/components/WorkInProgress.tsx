@@ -13,13 +13,8 @@ export default function WorkInProgress() {
         alt="Dylan Logo"
         width={140}
         height={140}
-        className="dark:filter-none filter brightness-100 saturate-0 invert transition-all mb-4"
+        className="z-[-1] animate-bounce dark:filter-none pointer-events-none filter brightness-100 saturate-0 invert transition-all mb-4"
       />
-     
-
-      <div className="text-6xl animate-bounce">
-        🚧
-      </div>
 
       <h1 className="text-3xl sm:text-4xl font-semibold">
         {t.workInProgress.title}

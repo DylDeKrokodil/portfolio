@@ -30,7 +30,6 @@ export default function LanguageSwitcher() {
 
   return (
     <div ref={switcherRef} className="relative">
-      {/* Button */}
       <button
         onClick={() => setOpen(!open)}
         className="flex items-center gap-2 px-3 py-1.5 rounded-md 
@@ -42,7 +41,6 @@ export default function LanguageSwitcher() {
         <span className="text-sm font-medium uppercase">{lang}</span>
       </button>
 
-      {/* Dropdown */}
       {open && (
         <div
           className="absolute right-0 mt-2 w-32 rounded-md shadow-lg z-50
@@ -56,7 +54,7 @@ export default function LanguageSwitcher() {
                   onClick={() => changeLang(l)}
                   className="flex items-center gap-2 w-full px-3 py-2 
                              text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-800 
-                             transition"
+                             transition z-50"
                 >
                   <span className="text-lg">{flags[l]}</span>
                   <span className="uppercase">{l}</span>

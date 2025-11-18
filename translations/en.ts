@@ -5,7 +5,7 @@ export default {
         contact: "Contact",
     },
     workInProgress: {
-        title: "Work in Progress",
+        title: "Work in progress",
         description: "I'm currently building my portfolio - new content, projects, and sections are being added soon. Stay tuned!",
     },
 }
