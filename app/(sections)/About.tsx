@@ -1,5 +1,7 @@
 "use client";
 
+import HomeLabel from "../components/HomeLabel";
+import HomeTitle from "../components/HomeTitle";
 import { useLang } from "../components/LanguageProvider";
 
 export default function About() {
@@ -12,17 +14,14 @@ export default function About() {
     >
       <div className="max-w-3xl space-y-12">
 
-        {/* Section Label */}
-        <span className="text-sm tracking-wide text-neutral-500 dark:text-neutral-400 uppercase">
+        <HomeLabel>
           {t.about.label}
-        </span>
+        </HomeLabel>
 
-        {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
+        <HomeTitle>
           {t.about.title}
-        </h2>
+        </HomeTitle>
 
-        {/* Paragraphs */}
         <div className="space-y-6">
           <p className="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
             {t.about.paragraph1}
@@ -33,7 +32,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Skills Row */}
         <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-6 text-neutral-800 dark:text-neutral-200">
           <div>
             <p className="font-medium mb-1">{t.about.focus.label}</p>
@@ -51,9 +49,8 @@ export default function About() {
           </div>
         </div>
 
-        {/* CTA */}
         <a
-          href="#projects"
+          href="/projects"
           className="
             inline-block mt-8 px-6 py-3 rounded-lg 
             bg-black text-white 
@@ -66,6 +63,6 @@ export default function About() {
           {t.about.cta}
         </a>
       </div>
-    </section>
+    </section >
   );
 }

@@ -1,4 +1,4 @@
-"use clinet"
+"use client"
 
 export const ButtonSecundary = ({
     children,

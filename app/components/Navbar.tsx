@@ -17,7 +17,6 @@ export default function Navbar() {
                     bg-white/80 dark:bg-black/50 backdrop-blur-sm 
                     border-b border-gray-200 dark:border-gray-800 relative">
 
-      {/* Logo */}
       <Link href="/" className="text-xl font-semibold z-50">
         <Image
           src="/logo.png"
@@ -32,23 +31,21 @@ export default function Navbar() {
         />
       </Link>
 
-      {/* Desktop Menu */}
       <div className="hidden md:flex items-center gap-6 text-sm">
-        <Link href="#projects" className="hover:text-gray-600 dark:hover:text-gray-300 transition">
+        <Link href="/projects" className="hover:text-gray-600 dark:hover:text-gray-300 transition">
           {t.navbar.projects}
         </Link>
-        <Link href="#about" className="hover:text-gray-600 dark:hover:text-gray-300 transition">
+        <Link href="/about" className="hover:text-gray-600 dark:hover:text-gray-300 transition">
           {t.navbar.about}
         </Link>
-        <Link href="#contact" className="hover:text-gray-600 dark:hover:text-gray-300 transition">
-          {t.navbar.contact}
+        <Link href="/travel" className="hover:text-gray-600 dark:hover:text-gray-300 transition">
+          {t.navbar.travel}
         </Link>
 
         <LanguageSwitcher />
         <ThemeToggle />
       </div>
 
-      {/* Mobile buttons */}
       <div className="flex md:hidden items-center gap-4 z-50">
         <LanguageSwitcher />
         <ThemeToggle />
@@ -61,21 +58,22 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
       {open && (
         <div
           className="absolute top-full left-0 w-full bg-white/95 dark:bg-black/80 backdrop-blur-sm
                      border-b border-gray-200 dark:border-gray-800 md:hidden flex flex-col 
                      items-start px-6 py-4 gap-4 text-lg animate-in fade-in slide-in-from-top-2"
         >
-          <Link href="#projects" onClick={() => setOpen(false)}>
+          <Link href="/projects" onClick={() => setOpen(false)}>
             {t.navbar.projects}
           </Link>
-          <Link href="#about" onClick={() => setOpen(false)}>
+
+          <Link href="/about" onClick={() => setOpen(false)}>
             {t.navbar.about}
           </Link>
-          <Link href="#contact" onClick={() => setOpen(false)}>
-            {t.navbar.contact}
+
+          <Link href="/travel" onClick={() => setOpen(false)}>
+            {t.navbar.travel}
           </Link>
         </div>
       )}
