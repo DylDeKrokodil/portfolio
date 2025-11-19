@@ -12,7 +12,7 @@ export default function Projects() {
     return (
         <section
             id="projects"
-            className="w-full py-40 px-6 md:px-20 lg:px-32"
+            className="w-full py-20 px-6 md:px-20 lg:px-32"
         >
             <div className="max-w-4xl mx-auto mb-16 space-y-4">
                 <HomeLabel>

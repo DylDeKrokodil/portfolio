@@ -12,7 +12,7 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="w-full py-32 px-6 md:px-20 lg:px-32"
+            className="w-full py-20 px-6 md:px-20 lg:px-32"
         >
             <div className="max-w-4xl mx-auto space-y-10">
                 <HomeLabel>
