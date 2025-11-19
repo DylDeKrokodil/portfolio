@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "./components/Navbar";
 import { LanguageProvider } from "./components/LanguageProvider";
+import Footer from "./components/Footer";
  
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,12 +35,13 @@ export default function RootLayout({
         transition-colors duration-300
         ${geistSans.variable} ${geistMono.variable}
       ">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true}>
           <LanguageProvider>
             <Navbar/>
             <div className="max-w-5xl mx-auto px-4 sm:px-12">
               {children}
             </div>
+            <Footer />
           </LanguageProvider>
         </ThemeProvider>
       </body>

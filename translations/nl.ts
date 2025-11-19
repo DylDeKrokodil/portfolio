@@ -3,6 +3,7 @@ export default {
         projects: "Projecten",
         about: "Over mij",
         contact: "Contact",
+        travel: "Reizen"
     },
     workInProgress: {
         title: "Werk in uitvoering",
@@ -40,7 +41,69 @@ export default {
         label: "Projecten",
         title: "Geselecteerd Werk",
         description: "Een paar projecten waar ik aan heb gewerkt.",
-        link: "Bekijk Project →"
+        link: "Bekijk Project →",
 
+        list: [
+            {
+                title: "Poker Dice (Kotlin/Spring)",
+                description: "Een multi-module backend met JWT-authenticatie, Dockerized Postgres en een clean domeinstructuur.",
+                tags: ["Kotlin", "Spring Boot", "Postgres", "Docker"],
+                link: "#"
+            },
+            {
+                title: "FlexFlow - Workforce Scheduling Platform",
+                description: "Een volledig cross-platform plannings- en personeelsbeheersysteem met een .NET-backend, Nuxt/Vue-webapp en native iOS/Android-apps.",
+                tags: ["C# / .NET", "Nuxt.js", "Vue", "Swift", "Kotlin"],
+                link: "#"
+            },
+            {
+                title: "HetKoppel Webpage Builder",
+                description: "Een aangepaste websitebouwer ontwikkeld voor HetKoppel, waarmee dynamische pagina's kunnen worden gemaakt, content kan worden beheerd en herbruikbare componenten kunnen worden gebruikt met Laravel.",
+                tags: ["Laravel", "PHP", "Blade", "MySQL", "JavaScript"],
+                link: "#"
+            },
+            {
+                title: "Household Budget Manager",
+                description: "Een React- en Next.js-toepassing gebouwd met Firebase voor het beheren van gedeelde huishoudelijke uitgaven, budgettering en realtime gegevenssynchronisatie.",
+                tags: ["React", "Next.js", "Firebase", "TypeScript"],
+                link: "#"
+            }
+        ]
+    },
+    skills: {
+        label: "Skills",
+        title: "Skills waar ik mee heb gewerkt",
+        list: [
+            { name: "JavaScript" },
+            { name: "TypeScript" },
+            { name: "React" },
+            { name: "Next.js" },
+            { name: "Kotlin" },
+            { name: "Spring Boot" },
+            { name: "C# / .NET" },
+            { name: "Vue.js" },
+            { name: "Laravel" },
+            { name: "PHP" },
+        ],
+    },
+    countries: {
+        label: "Landen",
+        title: "Landen die ik heb bezocht",
+        list: [
+            { name: "NL", flag: "🇳🇱" },
+            { name: "DE", flag: "🇩🇪" },
+            { name: "BE", flag: "🇧🇪" },
+            { name: "LU", flag: "🇱🇺" },
+            { name: "AT", flag: "🇦🇹" },
+            { name: "UK", flag: "🇬🇧" },
+            { name: "ES", flag: "🇪🇸" },
+            { name: "PT", flag: "🇵🇹" },
+            { name: "HR ", flag: "🇭🇷" },
+            { name: "SK", flag: "🇸🇰" },
+            { name: "US", flag: "🇺🇸" },
+            { name: "MX", flag: "🇲🇽" },
+            { name: "CL", flag: "🇨🇱" },
+            { name: "CW", flag: "🇨🇼" },
+        ]
     }
 }
