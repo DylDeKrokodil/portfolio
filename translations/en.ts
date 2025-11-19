@@ -1,4 +1,9 @@
 export default {
+    notFound: {
+        title: "404 - Page not found",
+        description: "It looks like you are lost. The page you are looking for does not exist. ",
+        goHome: "Go back to the homepage"
+    },
     navbar: {
         projects: "Projects",
         about: "About",
@@ -92,20 +97,20 @@ export default {
         label: "Countries",
         title: "Countries I've visited",
         list: [
-            { name: "NL", flag: "🇳🇱" },
-            { name: "DE", flag: "🇩🇪" },
-            { name: "BE", flag: "🇧🇪" },
-            { name: "LU", flag: "🇱🇺" },
-            { name: "AT", flag: "🇦🇹" },
-            { name: "UK", flag: "🇬🇧" },
-            { name: "ES", flag: "🇪🇸" },
-            { name: "PT", flag: "🇵🇹" },
-            { name: "HR ", flag: "🇭🇷" },
-            { name: "SK", flag: "🇸🇰" },
-            { name: "US", flag: "🇺🇸" },
-            { name: "MX", flag: "🇲🇽" },
-            { name: "CL", flag: "🇨🇱" },
-            { name: "CW", flag: "🇨🇼" },
+            { code: "NL", flag: "🇳🇱" },
+            { code: "DE", flag: "🇩🇪" },
+            { code: "BE", flag: "🇧🇪" },
+            { code: "LU", flag: "🇱🇺" },
+            { code: "AT", flag: "🇦🇹" },
+            { code: "UK", flag: "🇬🇧" },
+            { code: "ES", flag: "🇪🇸" },
+            { code: "PT", flag: "🇵🇹" },
+            { code: "HR ", flag: "🇭🇷" },
+            { code: "SK", flag: "🇸🇰" },
+            { code: "US", flag: "🇺🇸" },
+            { code: "MX", flag: "🇲🇽" },
+            { code: "CL", flag: "🇨🇱" },
+            { code: "CW", flag: "🇨🇼" },
         ]
     }
 

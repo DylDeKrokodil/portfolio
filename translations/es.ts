@@ -1,4 +1,9 @@
 export default {
+    notFound: {
+        title: "404 - Página no encontrada",
+        description: "Parece que estás perdido. La página que buscas no existe.",
+        goHome: "Volver a la página principal"
+    },
     navbar: {
         projects: "Proyectos",
         about: "Sobre mí",
@@ -27,14 +32,14 @@ export default {
             label: "Focus",
             text: "Full-stack development"
         },
-        approach: { 
+        approach: {
             label: "Enfoque",
-            text: "Simple" 
+            text: "Simple"
         },
         lifestyle: {
-            label: "Lifestyle", 
-            text: "Viajando" 
-        },  
+            label: "Lifestyle",
+            text: "Viajando"
+        },
         cta: "Ver Mi Trabajo"
     },
     projects: {
@@ -90,20 +95,20 @@ export default {
         label: "Países",
         title: "Países que he visitado",
         list: [
-            { name: "NL", flag: "🇳🇱" },
-            { name: "DE", flag: "🇩🇪" },
-            { name: "BE", flag: "🇧🇪" },
-            { name: "LU", flag: "🇱🇺" },
-            { name: "AT", flag: "🇦🇹" },
-            { name: "UK", flag: "🇬🇧" },
-            { name: "ES", flag: "🇪🇸" },
-            { name: "PT", flag: "🇵🇹" },
-            { name: "HR ", flag: "🇭🇷" },
-            { name: "SK", flag: "🇸🇰" },
-            { name: "US", flag: "🇺🇸" },
-            { name: "MX", flag: "🇲🇽" },
-            { name: "CL", flag: "🇨🇱" },
-            { name: "CW", flag: "🇨🇼" },
+            { code: "NL", flag: "🇳🇱" },
+            { code: "DE", flag: "🇩🇪" },
+            { code: "BE", flag: "🇧🇪" },
+            { code: "LU", flag: "🇱🇺" },
+            { code: "AT", flag: "🇦🇹" },
+            { code: "UK", flag: "🇬🇧" },
+            { code: "ES", flag: "🇪🇸" },
+            { code: "PT", flag: "🇵🇹" },
+            { code: "HR ", flag: "🇭🇷" },
+            { code: "SK", flag: "🇸🇰" },
+            { code: "US", flag: "🇺🇸" },
+            { code: "MX", flag: "🇲🇽" },
+            { code: "CL", flag: "🇨🇱" },
+            { code: "CW", flag: "🇨🇼" },
         ]
     }
 }

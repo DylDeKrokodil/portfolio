@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link";
+
 export const ButtonSecundary = ({
     children,
     href
@@ -8,7 +10,7 @@ export const ButtonSecundary = ({
     href: string;
 }) => {
     return (
-        <a
+        <Link
             href={href}
             className="
         px-7 py-3 rounded-lg 
@@ -19,6 +21,6 @@ export const ButtonSecundary = ({
       "
         >
             {children}
-        </a>
+        </Link>
     );
 }
