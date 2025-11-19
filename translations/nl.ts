@@ -19,7 +19,7 @@ export default {
         label: "Over",
         title: "Een beetje over mij.",
         paragraph1:
-            "Ik ben Dylan - een software developer uit Nederland. Ik geniet ervan om schone, functionele digitale ervaringen te bouwen en nieuwe plekken over de hele",
+            "Ik ben Dylan, een software developer uit Nederland. Ik geniet ervan om schone, functionele digitale ervaringen te bouwen en nieuwe plekken over de hele",
         paragraph2:
             "Ik studeer momenteel Informatica aan Avans. Ik werk graag aan projecten die logica, design en het oplossen van echte problemen combineren.",
         focus: {

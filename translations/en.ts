@@ -20,7 +20,7 @@ export default {
         label: "About",
         title: "A bit about me.",
         paragraph1:
-            "I'm Dylan — a software developer from the Netherlands. I enjoy building clean, functional digital experiences and discovering new places around the world.",
+            "I'm Dylan, a software developer from the Netherlands. I enjoy building clean, functional digital experiences and discovering new places around the world.",
         paragraph2:
             "I'm currently studying Computer Science at Avans. I like working on projects that combine logic, design, and real-world problem solving.",
         focus: {
