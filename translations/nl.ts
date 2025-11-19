@@ -26,14 +26,21 @@ export default {
             label: "Focus",
             text: "Full-stack development"
         },
-        approach: { 
+        approach: {
             label: "Aanpak",
-            text: "Simpel" 
+            text: "Simpel"
         },
         lifestyle: {
-            label: "Lifestyle", 
-            text: "Reizen" 
-        },  
+            label: "Lifestyle",
+            text: "Reizen"
+        },
         cta: "Bekijk Mijn Werk"
+    },
+    projects: {
+        label: "Projecten",
+        title: "Geselecteerd Werk",
+        description: "Een paar projecten waar ik aan heb gewerkt.",
+        link: "Bekijk Project →"
+
     }
 }

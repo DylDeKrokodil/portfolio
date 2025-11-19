@@ -44,15 +44,15 @@ export default function Projects() {
             {/* Section heading */}
             <div className="max-w-4xl mx-auto mb-16 space-y-4">
                 <span className="text-sm tracking-wide text-neutral-500 dark:text-neutral-400 uppercase">
-                    {t.projects?.label || "Projects"}
+                    {t.projects.label}
                 </span>
 
                 <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
-                    Selected Work
+                    {t.projects.title}
                 </h2>
 
                 <p className="text-lg text-neutral-600 dark:text-neutral-400">
-                    A few projects I've worked on - more coming soon.
+                    {t.projects.description}
                 </p>
             </div>
 
@@ -97,7 +97,7 @@ export default function Projects() {
                             href={project.link}
                             className="text-sm font-medium text-neutral-900 dark:text-neutral-50 underline underline-offset-4 hover:opacity-80"
                         >
-                            View Project →
+                            {t.projects.link}
                         </a>
                     </div>
                 ))}

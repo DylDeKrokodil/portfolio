@@ -36,6 +36,12 @@ export default {
             text: "Traveling" 
         },  
         cta: "View My Work"
+    },
+    projects: {
+        label: "Projects",
+        title: "Selected Work",
+        description: "A few projects I've worked on",
+        link: "View Project →"
     }
 
 }
