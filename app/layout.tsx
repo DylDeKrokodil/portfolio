@@ -38,9 +38,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true}>
           <LanguageProvider>
             <Navbar/>
-            <div className="max-w-5xl mx-auto px-4 sm:px-12">
+            <main className="max-w-5xl mx-auto px-4 sm:px-12">
               {children}
-            </div>
+            </main>
             <Footer />
           </LanguageProvider>
         </ThemeProvider>

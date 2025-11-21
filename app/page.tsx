@@ -6,12 +6,12 @@ import Skills from "./(sections)/Skills";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Hero/>
       <About/>
       <Projects/>
       <Skills/>
       <Countries/>
-    </div> 
+    </> 
   );
 }
