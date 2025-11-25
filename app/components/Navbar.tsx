@@ -13,11 +13,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full px-6 py-4 flex items-center justify-between 
-                    bg-white/80 dark:bg-black/50 backdrop-blur-sm z-1
-                    border-b border-gray-200 dark:border-gray-800 relative">
+    <nav className="w-full px-6 py-4 flex items-center justify-between bg-white/80 dark:bg-black/50 backdrop-blur-sm z-30 border-b border-gray-200 dark:border-gray-800 relative">
 
-      <Link href="/" className="text-xl font-semibold z-50">
+      <Link href="/" className="text-xl font-semibold z-40">
         <Image
           src="/logo.png"
           alt="Logo"
@@ -46,7 +44,7 @@ export default function Navbar() {
         <ThemeToggle />
       </div>
 
-      <div className="flex md:hidden items-center gap-4 z-50">
+      <div className="flex md:hidden items-center gap-4 z-40">
         <LanguageSwitcher />
         <ThemeToggle />
 
@@ -60,9 +58,7 @@ export default function Navbar() {
 
       {open && (
         <div
-          className="absolute top-full left-0 w-full bg-white/95 dark:bg-black/80 backdrop-blur-sm
-                     border-b border-gray-200 dark:border-gray-800 md:hidden flex flex-col z-40 
-                     items-start px-6 py-4 gap-4 text-lg animate-in fade-in slide-in-from-top-2"
+          className="absolute top-full left-0 w-full bg-white/95 dark:bg-black/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 md:hidden flex flex-col z-20 items-start px-6 py-4 gap-4 text-lg animate-in fade-in slide-in-from-top-2"
         >
           <Link href="/projects" onClick={() => setOpen(false)}>
             {t.navbar.projects}

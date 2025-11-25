@@ -5,7 +5,7 @@ import { ThemeProvider } from "next-themes";
 import Navbar from "./components/Navbar";
 import { LanguageProvider } from "./components/LanguageProvider";
 import Footer from "./components/Footer";
- 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,17 +28,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="
-        bg-white text-black 
-        dark:bg-black dark:text-white 
-        min-h-screen 
+      <body
+        className={`
+        bg-white text-black
+        dark:bg-black dark:text-white
+        min-h-screen
         transition-colors duration-300
         ${geistSans.variable} ${geistMono.variable}
-      ">
+      `}
+      >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true}>
           <LanguageProvider>
             <Navbar/>
-            <main className="max-w-5xl mx-auto px-4 sm:px-12">
+            <main className="w-full">
               {children}
             </main>
             <Footer />

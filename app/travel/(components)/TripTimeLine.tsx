@@ -1,56 +1,81 @@
 "use client";
 
+import HomeLabel from "@/app/components/HomeLabel";
+import HomeTitle from "@/app/components/HomeTitle";
 import { useLang } from "@/app/components/LanguageProvider";
+import { Section } from "@/app/components/Section";
 import { getTripTimeline } from "@/lib/travelUtils";
 
-export default function TripTimeline() {
-    const { t } = useLang()
+type TripTimelineProps = {
+    countryCount: number;
+    cityCount: number;
+};
+
+export default function TripTimeline({ countryCount, cityCount }: TripTimelineProps) {
+    const { t } = useLang();
     const trips = getTripTimeline().sort((a, b) =>
         b.date.localeCompare(a.date)
     );
 
     return (
-        <div className="max-w-4xl mx-auto px-4 py-12">
-            <h2 className="text-4xl font-bold mb-12 text-center">Trip Timeline</h2>
+        <Section id="travel" innerClassName="space-y-12">
+            <div className="max-w-3xl space-y-4">
+                <HomeLabel>{t.navbar.travel}</HomeLabel>
+                <HomeTitle>Trip timeline</HomeTitle>
+                <p className="text-neutral-600 dark:text-neutral-400 text-lg">
+                    A neutral look at recent trips, destinations, and dates using the same typography scale as the homepage sections.
+                </p>
+                <div className="flex flex-wrap gap-3 text-sm text-neutral-700 dark:text-neutral-300">
+                    <span className="rounded-full bg-neutral-100 dark:bg-neutral-800 px-3 py-1 border border-neutral-200 dark:border-neutral-700">{countryCount} countries</span>
+                    <span className="rounded-full bg-neutral-100 dark:bg-neutral-800 px-3 py-1 border border-neutral-200 dark:border-neutral-700">{cityCount} cities</span>
+                </div>
+            </div>
 
             <div className="space-y-8">
                 {trips.map((trip, i) => (
-                    <div key={i} className="relative pl-8 border-l-2 border-blue-400 hover:border-blue-600 transition-colors">
-                        {/* Dot */}
-                        <div className="absolute -left-4 top-0 w-6 h-6 bg-blue-500 rounded-full shadow-lg ring-4 ring-white dark:ring-gray-900 hover:bg-blue-600 transition-colors"></div>
+                    <div
+                        key={i}
+                        className="relative rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-6 shadow-sm"
+                    >
+                        <div className="flex items-start gap-4">
+                            <div className="mt-1 h-3 w-3 rounded-full bg-neutral-900 dark:bg-neutral-100" aria-hidden />
+                            <div className="flex-1 space-y-3">
+                                <div className="flex flex-wrap items-center gap-3">
+                                    <span className="text-2xl" aria-hidden>
+                                        {getFlag(trip.country)}
+                                    </span>
+                                    <p className="text-sm uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+                                        {trip.country}
+                                    </p>
+                                    <p className="text-sm font-semibold text-neutral-700 dark:text-neutral-300">
+                                        {formatDate(trip.date)}
+                                    </p>
+                                </div>
 
-                        {/* Country Header */}
-                        <h3 className="text-2xl font-bold flex items-center gap-3 mb-2">
-                            <span className="text-3xl">{getFlag(trip.country)}</span>
-                            <span className="text-blue-600 dark:text-blue-400">{(`travel.${trip.country}.title`)}</span>
-                        </h3>
+                                <div className="space-y-2">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-neutral-500 dark:text-neutral-400">Destinations</p>
+                                    <div className="flex flex-wrap gap-2">
+                                        {trip.destinations.map((d) => (
+                                            <span
+                                                key={d}
+                                                className="inline-flex items-center gap-2 rounded-full bg-neutral-100 dark:bg-neutral-800 px-3 py-1 text-sm text-neutral-700 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-700"
+                                            >
+                                                <span className="h-1.5 w-1.5 rounded-full bg-neutral-500" aria-hidden />
+                                                {d}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
 
-                        {/* Date */}
-                        <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3">
-                            {formatDate(trip.date)}
-                        </p>
-
-                        {/* Destinations */}
-                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-lg p-4 mb-3">
-                            <p className="text-xs font-semibold text-gray-600 dark:text-gray-300 mb-2 uppercase tracking-wide">Destinations</p>
-                            <ul className="grid grid-cols-2 gap-2">
-                                {trip.destinations.map((d) => (
-                                    <li key={d} className="text-sm text-gray-700 dark:text-gray-200 flex items-center gap-2">
-                                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-                                        {d}
-                                    </li>
-                                ))}
-                            </ul>
+                                <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+                                    {trip.descriptionKey}
+                                </p>
+                            </div>
                         </div>
-
-                        {/* Description */}
-                        <p className="text-sm text-gray-600 dark:text-gray-300 italic leading-relaxed border-l-2 border-blue-200 pl-3">
-                            {(trip.descriptionKey)}
-                        </p>
                     </div>
                 ))}
             </div>
-        </div>
+        </Section>
     );
 }
 
