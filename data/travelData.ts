@@ -15,7 +15,7 @@ export const travelData = {
                         ]
                     },
                 ],
-                descriptionKey: "travel.us.newYork.description"
+                descriptionKey: "travel.us.newYorkTrip.description"
             }
         ]
     },
@@ -80,7 +80,7 @@ export const travelData = {
                         ]
                     }
                 ],
-                descriptionKey: "travel.es.malaga.description",
+                descriptionKey: "travel.es.malagaTrip.description",
                 duration: "12 weeks"
             }
         ]
@@ -99,7 +99,7 @@ export const travelData = {
                         ]
                     },
                 ],
-                descriptionKey: "travel.uk.london.description"
+                descriptionKey: "travel.uk.londonTrip.description"
             }
         ]
     },
@@ -118,7 +118,7 @@ export const travelData = {
                         ]
                     }
                 ],
-                descriptionKey: "travel.hr.zadar.description"
+                descriptionKey: "travel.hr.zadarTrip.description"
             }
         ]
     },
@@ -191,7 +191,7 @@ export const travelData = {
                         ]
                     }
                 ],
-                descriptionKey: "travel.cl.puertoMontt.description"
+                descriptionKey: "travel.cl.puertoMonttTrip.description"
             }
         ]
     },
@@ -217,7 +217,7 @@ export const travelData = {
                         ]
                     }
                 ],
-                descriptionKey: "travel.mx.cancun.description"
+                descriptionKey: "travel.mx.cancunTrip.description"
             }
         ]
     },
@@ -256,7 +256,7 @@ export const travelData = {
                         ]
                     }
                 ],
-                descriptionKey: "travel.pt.lisbon.description"
+                descriptionKey: "travel.pt.lisbonTrip.description"
             }
         ]
     },
