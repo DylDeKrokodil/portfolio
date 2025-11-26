@@ -2,35 +2,26 @@
 
 import Image from "next/image";
 import { useLang } from "../components/LanguageProvider";
-import { ButtonPrimary } from "../components/ButtonPrimary";
-import { ButtonSecundary } from "../components/ButtonSecundary";
+import { Button } from "../components/Button";
+import { Section } from "../components/Section";
 
 export default function Hero() {
     const { t } = useLang();
 
     return (
-        <section
+        <Section
             id="hero"
-            className="
-                w-full 
-                min-h-[85vh]
-                flex flex-col md:flex-row
-                items-center justify-center
-                px-6 md:px-20 lg:px-32
-                pt-20 md:pt-10
-                gap-14 md:gap-24
-            "
+            innerClassName="min-h-[80vh] flex flex-col md:flex-row items-center justify-center gap-14 md:gap-20"
         >
             {/* LEFT CARD */}
             <div
                 className="
-                    flex-1 max-w-xl 
-                    p-10 
-                    backdrop-blur-xl
-                    bg-white/70 dark:bg-[#111]/60
-                    border border-black/10 dark:border-white/10
-                    rounded-2xl 
-                    shadow-[0_8px_30px_rgb(0,0,0,0.12)]
+                    flex-1 max-w-xl
+                    p-10
+                    bg-white dark:bg-neutral-900
+                    border border-neutral-200 dark:border-neutral-800
+                    rounded-2xl
+                    shadow-lg
                     space-y-6
                 "
             >
@@ -46,14 +37,14 @@ export default function Hero() {
                     ✈️ {t.hero.travel}
                 </p>
 
-                <div className="flex gap-4 pt-4">
-                    <ButtonPrimary href="/projects">
+                <div className="flex gap-3 pt-4 flex-wrap">
+                    <Button href="/projects" variant="primary">
                         {t.hero.projectsButton}
-                    </ButtonPrimary>
+                    </Button>
 
-                    <ButtonSecundary href="/about">
+                    <Button href="/about" variant="secondary">
                         {t.hero.aboutButton}
-                    </ButtonSecundary>
+                    </Button>
                 </div>
             </div>
 
@@ -61,13 +52,13 @@ export default function Hero() {
             <div className="flex-1 flex justify-center md:justify-end">
                 <div
                     className="
-                        relative 
+                        relative
                         w-[260px] sm:w-[310px] md:w-[350px]
                         aspect-[4/5]
-                        rounded-2xl overflow-hidden 
-                        shadow-xl
-                        border border-white/10 dark:border-white/10
-                        bg-neutral-900/10 dark:bg-neutral-700/10
+                        rounded-2xl overflow-hidden
+                        shadow-lg
+                        border border-neutral-200 dark:border-neutral-800
+                        bg-neutral-100 dark:bg-neutral-900
                     "
                 >
                     <Image
@@ -76,7 +67,7 @@ export default function Hero() {
                         fill
                         priority
                         className="
-                            object-cover 
+                            object-cover
                             object-top
                             transition-transform duration-500
                             hover:scale-105
@@ -84,6 +75,6 @@ export default function Hero() {
                     />
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }

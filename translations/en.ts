@@ -112,6 +112,237 @@ export default {
             { code: "CL", flag: "🇨🇱" },
             { code: "CW", flag: "🇨🇼" },
         ]
-    }
+    },
+    filter: {
+        oldest: "Oldest",
+        newest: "Newest"
+    },
+    timeline: {
+        countries: "countries",
+        cities: "cities",
+        tripTimeline: "Trip timeline",
+        destinations: "Destinations"
+    },
+    travel: {
+        us: {
+            title: "United States",
+            newYork: "New York City",
+            newJersey: "New Jersey",
+            newYorkTrip: {
+                description: "School trip to New York and a hockey game in New Jersey."
+            }
+        },
 
+        es: {
+            title: "Spain",
+
+            // Tenerife trips
+            icodDeLosVinos: "Icod de los Vinos",
+            playaDeLasAmericas: "Playa de las Américas",
+            losCristianos: "Los Cristianos",
+            costaAdeje: "Costa Adeje",
+            adeje: "Adeje",
+            losAbrigos: "Los Abrigos",
+            santaCruzDeTenerife: "Santa Cruz de Tenerife",
+            buenaVistaDelNorte: "Buenavista del Norte",
+            sanIsidrio: "San Isidro",
+
+            tenerife1: {
+                description: "A fun Tenerife trip with a good friend - parties, cold beaches, natural pools, and Siam Park."
+            },
+            tenerife2: {
+                description: "A return trip to Tenerife with two good friends - parties, road trips, Siam Park, and cold beaches."
+            },
+
+            // Málaga trip
+            malaga: "Málaga",
+            ronda: "Ronda",
+            seville: "Seville",
+            nerja: "Nerja",
+            cadiz: "Cádiz",
+            cordoba: "Córdoba",
+            marbella: "Marbella",
+
+            malagaTrip: {
+                description: "A 12-week stay in southern Spain with a Spanish course, city trips, beaches, and nights out."
+            },
+
+            valencia: "Valencia",
+        },
+
+        uk: {
+            title: "United Kingdom",
+            london: "London",
+            londonTrip: {
+                description: "A festive December visit to London."
+            }
+        },
+
+        hr: {
+            title: "Croatia",
+            zadar: "Zadar",
+            split: "Split",
+            zadarTrip: {
+                description: "A spring trip to Zadar with two good friends - lots of laughter, nature, and city exploring."
+            }
+        },
+
+        cw: {
+            title: "Curaçao",
+            janThiel: "Jan Thiel",
+            willemstad: "Willemstad",
+            sintMichiel: "Sint Michiel",
+            janKok: "Jan Kok",
+            westpunt: "Westpunt",
+            curacao: {
+                description: "A Caribbean island trip with two friends - beaches, activities, nights out, and watching the Dutch Euro Cup matches."
+            }
+        },
+
+        at: {
+            title: "Austria",
+            vienna: "Vienna",
+            kittsee: "Kittsee",
+            mariaEnzersdorf: "Maria Enzersdorf",
+            hinterbruhl: "Hinterbrühl",
+            leoben: "Leoben",
+            sonnleiten: "Sonnleiten",
+            austria: {
+                description: "A winter trip to Austria with Christmas markets, Vienna sightseeing, nature, and a day trip to Bratislava."
+            }
+        },
+
+        cl: {
+            title: "Chile",
+            puertoMontt: "Puerto Montt",
+            puertoVaras: "Puerto Varas",
+            rioNegro: "Río Negro",
+            puelo: "Puelo",
+            petrohue: "Petrohué",
+            puertoMonttTrip: {
+                description: "A journey through southern Chile filled with road trips, volcanoes, and beautiful nature."
+            }
+        },
+
+        mx: {
+            title: "Mexico",
+            cancun: "Cancún",
+            holbox: "Holbox",
+            islaMujeres: "Isla Mujeres",
+            playaDelCarmen: "Playa del Carmen",
+            tulum: "Tulum",
+            akumal: "Akumal",
+            valladolid: "Valladolid",
+            puertoMorelos: "Puerto Morelos",
+            cancunTrip: {
+                description: "An adventure in Mexico with a good friend - beaches, activities, great food, and exploring the best of Cancún."
+            }
+        },
+
+        pt: {
+            title: "Portugal",
+            lisbon: "Lisbon",
+            sintra: "Sintra",
+            cascais: "Cascais",
+            amadora: "Amadora",
+            albufeira: "Albufeira",
+            portimao: "Portimão",
+            colares: "Colares",
+            sagres: "Sagres",
+            costaDaCaparica: "Costa da Caparica",
+            grandola: "Grândola",
+            estombar: "Estômbar",
+            lagos: "Lagos",
+            lagoa: "Lagoa",
+            alvor: "Alvor",
+            carcavelos: "Carcavelos",
+            almada: "Almada",
+
+            lisbonTrip: {
+                description: "A wild Erasmus semester in Portugal filled with parties, learning Portuguese, new friends, and endless trips."
+            }
+        },
+
+        nl: {
+            title: "Netherlands",
+            // If you want, I can generate automatic human-readable labels,
+            // but for now I only include structure — let me know to expand.
+            // Example:
+            amsterdam: "Amsterdam",
+            reuver: "Reuver",
+            eindhoven: "Eindhoven",
+            venlo: "Venlo",
+            // …
+        },
+
+        be: {
+            title: "Belgium",
+            liege: "Liège",
+            brussels: "Brussels",
+            blankeberge: "Blankenberge",
+        },
+
+        de: {
+            title: "Germany",
+            bocholt: "Bocholt",
+            essen: "Essen",
+            badem: "Badem",
+            gondorf: "Gondorf",
+            trier: "Trier",
+            bitburg: "Bitburg",
+            ulmen: "Ulmen",
+            waxweiler: "Waxweiler",
+            bedburg: "Bedburg",
+            bruhl: "Brühl",
+            dusseldorf: "Düsseldorf",
+            frankfurtAmMain: "Frankfurt am Main",
+            nuremberg: "Nuremberg",
+            munich: "Munich",
+            krefeld: "Krefeld",
+            cochem: "Cochem",
+            bielefeld: "Bielefeld",
+            hamm: "Hamm",
+            duren: "Düren",
+            munster: "Münster",
+            neuss: "Neuss",
+            westerkappeln: "Westerkappeln",
+            oberhausen: "Oberhausen",
+            eschweiler: "Eschweiler",
+            dortmund: "Dortmund",
+            kerpen: "Kerpen",
+            erftstadt: "Erftstadt",
+            viersen: "Viersen",
+            wurselen: "Würselen",
+            alsdorf: "Alsdorf",
+            herzogenrath: "Herzogenrath",
+            aachen: "Aachen",
+            niederkruchten: "Niederkrüchten",
+            monchengladbach: "Mönchengladbach",
+            cologne: "Cologne",
+            selfkant: "Selfkant",
+            nettetal: "Nettetal"
+        },
+
+        lu: {
+            title: "Luxembourg",
+            luxembourg: "Luxembourg City",
+            vianden: "Vianden",
+            echternach: "Echternach",
+            berdorf: "Berdorf",
+            diekirch: "Diekirch",
+            waldbillig: "Waldbillig",
+            consdorf: "Consdorf",
+            larochette: "Larochette"
+        },
+
+        gi: {
+            title: "Gibraltar",
+            gibraltar: "Gibraltar"
+        },
+
+        sk: {
+            title: "Slovakia",
+            bratislava: "Bratislava"
+        }
+    }
 }

@@ -5,7 +5,7 @@ import { ThemeProvider } from "next-themes";
 import Navbar from "./components/Navbar";
 import { LanguageProvider } from "./components/LanguageProvider";
 import Footer from "./components/Footer";
- 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,10 +16,38 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Dylan - Portfolio",
-  description: "Travel x Projects",
+export const metadata = {
+  title: "Dylan de Groot - Software Developer & Traveler",
+  description: "Official portfolio of Dylan de Groot showcasing software projects and world travels.",
+  keywords: ["Dylan de Groot", "Software Developer", "Portfolio", "Travel"],
+  metadataBase: new URL("https://dylandegroot.nl"),
+  openGraph: {
+    title: "Dylan de Groot – Software Developer",
+    description: "Official portfolio of Dylan de Groot.",
+    url: "/",
+    siteName: "Dylan de Groot Portfolio",
+    images: [
+      {
+        url: "/og-preview.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dylan de Groot - Software Developer",
+    description: "Explore my projects and travels.",
+    images: ["/og-preview.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    // apple: "/apple-touch-icon.png",
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -28,19 +56,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="
-        bg-white text-black 
-        dark:bg-black dark:text-white 
-        min-h-screen 
+      <body
+        className={`
+        bg-white text-black
+        dark:bg-black dark:text-white
+        min-h-screen
         transition-colors duration-300
         ${geistSans.variable} ${geistMono.variable}
-      ">
+      `}
+      >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true}>
           <LanguageProvider>
-            <Navbar/>
-            <div className="max-w-5xl mx-auto px-4 sm:px-12">
+            <Navbar />
+            <main className="w-full">
               {children}
-            </div>
+            </main>
             <Footer />
           </LanguageProvider>
         </ThemeProvider>

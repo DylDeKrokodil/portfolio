@@ -2,6 +2,7 @@
 
 import HomeLabel from "../components/HomeLabel";
 import HomeTitle from "../components/HomeTitle";
+import { Section } from "../components/Section";
 import { useLang } from "../components/LanguageProvider";
 import type { Project } from "@/types/Project";
 
@@ -10,11 +11,8 @@ export default function Projects() {
     const projects = t.projects.list as Project[];
 
     return (
-        <section
-            id="projects"
-            className="w-full py-20 px-6 md:px-20 lg:px-32"
-        >
-            <div className="max-w-4xl mx-auto mb-16 space-y-4">
+        <Section id="projects">
+            <div className="max-w-4xl mx-auto mb-12 space-y-4">
                 <HomeLabel>
                     {t.projects.label}
                 </HomeLabel>
@@ -34,8 +32,8 @@ export default function Projects() {
                         key={index}
                         className="
                             border border-neutral-200 dark:border-neutral-800
-                            rounded-xl 
-                            p-8 
+                            rounded-xl
+                            p-8
                             hover:bg-neutral-50 dark:hover:bg-neutral-900/50
                             transition
                             space-y-4
@@ -69,6 +67,6 @@ export default function Projects() {
                     </div>
                 ))}
             </div>
-        </section >
+        </Section>
     );
 }
